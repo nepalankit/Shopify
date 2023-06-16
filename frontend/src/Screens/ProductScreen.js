@@ -16,7 +16,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { listProductDetails } from "../actions/productactions";
 
 const ProductScreen = () => {
-  const [qty, setQty] = useState(0);
+  const [qty, setQty] = useState(1);
   const { id } = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
