@@ -101,7 +101,7 @@ const ProductScreen = () => {
                       </Col>
                     </Row>
                   </ListGroup.Item>
-                )}
+                )}{" "}
                 <ListGroup.Item>
                   <Button
                     onClick={addToCartHandler}
@@ -112,7 +112,7 @@ const ProductScreen = () => {
                     Add To Cart
                   </Button>
                 </ListGroup.Item>
-              </ListGroup>
+              </ListGroup>{" "}
             </Card>
           </Col>
         </Row>
