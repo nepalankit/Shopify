@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import productRoutes from "./routes/productRoutes.js";
+import userRoutes from "./routes/userroutes.js";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
 dotenv.config();
@@ -9,12 +10,14 @@ dotenv.config();
 connectDB();
 
 const app = express();
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("api is running.");
 });
 
 app.use("/api/products", productRoutes); //linking endpoint to productroute
+app.use("/api/users", userRoutes); //linking endpoint to productroute
 // Error handling middleware
 app.use(notFound);
 
